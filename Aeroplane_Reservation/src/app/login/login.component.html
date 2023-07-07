@@ -1,0 +1,31 @@
+  <div class="container">
+    <div class="login_container">
+        <form action="#!" id="main">
+            <h1>Login to your account</h1>
+            <br>
+            <br>
+            <form [formGroup]="LoginAcceptForm" #localForm="ngForm">
+              <div class="input-parent">
+                <label for="username">Username or Email</label>
+                <br>
+                <input class="input_box" type="text" id="username" formControlName="username">
+                <br>
+              </div>
+              <br>
+              <div class="input-parent">
+                <label for="password">Password</label>
+                <br>
+                <input class="input_box" type="password" id="password" formControlName="password">
+                <br>
+              </div>
+              <br>
+              <span *ngIf= "!isValidForm" class= "invalid">All Fields Required</span>
+              <br>
+            </form>
+            <div class="buttons">
+                <button class="btn" type="submit" (click)="main()">Login</button>
+                <button class="btn" type="button" (click)="signup()">SignUp</button>
+            </div>
+          </form>
+    </div>
+  </div>

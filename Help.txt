@@ -1,0 +1,16 @@
+============= Frontend (Angular)
+
+----- Production Build
+ng build --configuration production
+
+
+----- Kill Port
+sudo lsof -t -i tcp:4200 | xargs kill -9
+
+============= Backend Service (Asp.Net Core Web Api) 
+
+-- To Do Scaffold
+Scaffold-DbContext "Name=ConnectionStrings:Flight_Reservation_ConnectionString" Pomelo.EntityFrameworkCore.MySql -Context Flight_DbContext -OutputDir Data -Force
+
+-- To see port for phpmyadmin
+SHOW VARIABLES WHERE Variable_name= 'port';
